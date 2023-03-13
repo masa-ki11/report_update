@@ -34,7 +34,7 @@ func main() {
 	}
 
 	// SQLコマンド作成
-	query := "UPDATE tbl_DairyReport SET Syunin = m.kyouryoku_id FROM tbl_DairyReport AS d JOIN master_accounts AS m ON d.Syunin = m.account_id WHERE LEFT(d.Syunin, 1) = 'K' "
+	query := "UPDATE [テーブル1] SET [カラム1] = m.[カラム2] FROM [テーブル1] AS d JOIN [テーブル2] AS m ON d.カラム1 = m.カラム2 WHERE LEFT(d.カラム1, 1) = 'K' "
 
 	rows, err := db.Query(query)
 	if err != nil {
